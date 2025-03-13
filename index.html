@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arno Programer</title>
+    <meta name="description" content="Portofolio resmi Galih Gratia Arno, seorang Programer Web Developer yang membuat website responsive, modern, dan profesional.">
+    <meta name="author" content="Galih Gratia Arno">
+    <meta property="og:title" content="Arno Programer">
+    <meta property="og:description" content="Portofolio resmi Galih Gratia Arno, seorang Programer Web Developer yang membuat website responsive, modern, dan profesional.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/heroicons@2.0.16/dist/heroicons.min.js"></script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out both;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 leading-relaxed">
+    
+    <!-- Header -->
+    <header class="bg-gray-800/80 backdrop-blur-md sticky top-0 z-10 shadow-lg transition-shadow duration-300" role="banner">
+        <nav class="container mx-auto flex justify-between items-center p-4" aria-label="Navigasi utama">
+            <a href="/" class="text-2xl font-bold text-purple-400" aria-label="Beranda"><strong>Arno</strong></a>
+            <ul class="flex space-x-6" role="list">
+                <li><a href="#projects" class="hover:text-purple-400 transition duration-300">Projects</a></li>
+                <li><a href="#contact" class="hover:text-purple-400 transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-purple-900 to-indigo-900 motion-safe:animate-fadeInUp" aria-labelledby="hero-landing">
+            <h1 id="hero-heading" class="text-4xl md:text-6xl font-bold mb-4 flex items-center gap-2 justify-center">
+                Hi, I'm <strong class="text-purple-400">Arno</strong>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-400 animate-float" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m0 14v1m7-7h1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
+                </svg>
+            </h1>
+            <p class="text-xl mb-6">Seorang <em class="text-purple-300">Programer</em> yang berfokus pada pengembangan website.</p>
+            <a href="#projects" class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out inline-flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+                Lihat Proyek
+            </a>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-16 px-8 bg-gray-800 motion-safe:animate-fadeInUp" aria-labelledby="projects-heading">
+            <div class="container mx-auto">
+                <h2 id="projects-heading" class="text-3xl font-bold mb-8 text-center text-purple-400">Proyek Terbaru</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Project 1 -->
+                    <article class="bg-gray-700/50 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105" aria-labelledby="project1-title">
+                        <figure class="overflow-hidden">
+                            <img src="assets/project-1.png" alt="Tampilan proyek Website Portofolio" class="w-full h-48 object-cover">
+                            <figcaption class="sr-only">Tampilan Website Portofolio</figcaption>
+                        </figure>
+                        <div class="p-6">
+                            <h3 id="project1-title" class="font-bold text-xl flex items-center gap-2 text-purple-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+                                </svg>
+                                Website Portofolio
+                            </h3>
+                            <p class="mt-2 text-gray-300">Website profesional untuk menampilkan hasil karya dan skill.</p>
+                            <a href="#" class="text-purple-400 mt-4 inline-block hover:text-purple-300 transition duration-300">Lihat Proyek</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="bg-gray-700/50 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105" aria-labelledby="project2-title">
+                        <figure class="overflow-hidden">
+                            <img src="assets/project-2.png" alt="Tampilan proyek Website E-Commerce" class="w-full h-48 object-cover">
+                            <figcaption class="sr-only">Tampilan Website E-Commerce</figcaption>
+                        </figure>
+                        <div class="p-6">
+                            <h3 id="project2-title" class="font-bold text-xl flex items-center gap-2 text-purple-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+                                </svg>
+                                Website E-Commerce
+                            </h3>
+                            <p class="mt-2 text-gray-300">Platform e-commerce yang responsif dan user-friendly.</p>
+                            <a href="#" class="text-purple-400 mt-4 inline-block hover:text-purple-300 transition duration-300">Lihat Proyek</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="bg-gray-700/50 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105" aria-labelledby="project3-title">
+                        <figure class="overflow-hidden">
+                            <img src="assets/project-3.png" alt="Tampilan proyek Website Blog" class="w-full h-48 object-cover">
+                            <figcaption class="sr-only">Tampilan Website Blog</figcaption>
+                        </figure>
+                        <div class="p-6">
+                            <h3 id="project3-title" class="font-bold text-xl flex items-center gap-2 text-purple-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+                                </svg>
+                                Website Blog
+                            </h3>
+                            <p class="mt-2 text-gray-300">Blog pribadi untuk berbagi pengetahuan dan pengalaman.</p>
+                            <a href="#" class="text-purple-400 mt-4 inline-block hover:text-purple-300 transition duration-300">Lihat Proyek</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-16 px-8 bg-gray-900 text-white text-center" aria-labelledby="contact-heading">
+            <div class="container mx-auto">
+                <h2 id="contact-heading" class="text-3xl font-bold mb-4 text-purple-400">Hubungi Saya</h2>
+                <p>Email: 
+                    <a href="mailto:galihgratiaarno@gmail.com" class="underline flex items-center gap-2 justify-center hover:text-purple-300 transform hover:-translate-y-1 transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 0v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8m18 0L12 13 3 8" />
+                        </svg>
+                        galihgratiaarno@gmail.com
+                    </a>
+                </p>
+                
+                <ul class="flex justify-center space-x-6 mt-4" role="list" aria-label="Link sosial media">
+                    <li>
+                        <a href="#" target="_blank" class="hover:text-purple-300 flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58v-2.18c-3.34.73-4.04-1.61-4.04-1.61a3.18 3.18 0 00-1.34-1.76c-1.1-.75.09-.74.09-.74a2.5 2.5 0 011.83 1.24 2.53 2.53 0 003.47 1 2.52 2.52 0 01.75-1.58c-2.66-.3-5.47-1.33-5.47-5.91a4.61 4.61 0 011.23-3.2 4.3 4.3 0 01.12-3.16s1-.32 3.28 1.22a11.3 11.3 0 015.97 0c2.25-1.54 3.26-1.22 3.26-1.22a4.3 4.3 0 01.12 3.16 4.58 4.58 0 011.22 3.2c0 4.6-2.81 5.6-5.48 5.89a2.83 2.83 0 01.81 2.2v3.26c0 .32.22.7.83.58A12 12 0 0012 0z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" class="hover:text-purple-300 flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V8H0v16zm7.5 0h5V14c0-2.45 3-2.65 3 0v10h5V13.25c0-6.59-7.5-6.34-8.5-3.11V8h-5v16z"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-4" role="contentinfo">
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 1.75A10.25 10.25 0 1 0 22.25 12 10.26 10.26 0 0 0 12 1.75zm0 18.5a8.25 8.25 0 1 1 8.25-8.25 8.26 8.26 0 0 1-8.25 8.25zm0-13a4.75 4.75 0 0 0-4.75 4.75.75.75 0 0 0 1.5 0 3.25 3.25 0 1 1 3.25 3.25.75.75 0 0 0 0 1.5A4.75 4.75 0 0 0 12 7.25z"/>
+            </svg>
+            2025 Arno. Dibuat dengan menggunakan TailwindCSS.
+        </p>
+    </footer>
+</body>
+</html>
