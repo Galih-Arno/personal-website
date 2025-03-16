@@ -37,6 +37,21 @@
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
+
+        @keyframes fade-in-up {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
+
+        .animate-fade-in-up {
+        animation: fade-in-up 0.7s ease-out forwards;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 leading-relaxed">
@@ -81,9 +96,17 @@
         <!-- Project Section -->
         <section id="projects" class="py-16 px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 motion-safe:animate-fadeInUp" aria-labelledby="projects-heading">
             <div class="container mx-auto">
-                <h2 id="projects-heading" class="text-4xl font-extrabold mb-12 text-center text-purple-400 tracking-wide">✨ Proyek Terbaru ✨</h2>
+                <h2 id="projects-heading" class="text-4xl font-extrabold mb-12 text-center text-purple-400 tracking-wide flex items-center justify-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 animate-pulse text-purple-300" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.386-2.46a1 1 0 00-1.175 0l-3.386 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                    Proyek Terbaru
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 animate-pulse text-purple-300" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.178c.969 0 1.371 1.24.588 1.81l-3.385 2.46a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.386-2.46a1 1 0 00-1.175 0l-3.386 2.46c-.784.57-1.838-.196-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118l-3.385-2.46c-.783-.57-.38-1.81.588-1.81h4.178a1 1 0 00.95-.69l1.286-3.967z" />
+                    </svg>
+                </h2>
                 <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Projects will be injected here by JavaScript -->
+                    <!-- Auto generate here -->
                 </div>
             </div>
         </section>
