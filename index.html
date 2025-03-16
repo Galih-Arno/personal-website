@@ -11,6 +11,10 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://unpkg.com/heroicons@2.0.16/dist/heroicons.min.js"></script>
     <style>
+        .custom-gradient {
+        background: linear-gradient(135deg, rgba(123,31,162,1) 0%, rgba(32,76,133,1) 50%, rgba(0,0,0,1) 100%);
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -40,7 +44,7 @@
     <!-- Header -->
     <header class="bg-gray-800/80 shadow-lg transition-shadow duration-300" role="banner">
         <nav class="container mx-auto flex justify-between items-center p-4" aria-label="Navigasi utama">
-            <a href="/" class="text-2xl font-bold text-purple-400" aria-label="Beranda"><strong>Arno</strong></a>
+            <a href="/" class="text-2xl font-bold text-purple-100" aria-label="Beranda"><strong>Arno</strong></a>
             <ul class="flex space-x-6" role="list">
                 <li><a href="#projects" class="hover:text-purple-400 transition duration-300">Projects</a></li>
                 <li><a href="#contact" class="hover:text-purple-400 transition duration-300">Contact</a></li>
@@ -52,14 +56,20 @@
     <main id="main-content">
 
         <!-- Hero Section -->
-        <section class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-purple-900 to-indigo-900 motion-safe:animate-fadeInUp" aria-labelledby="hero-landing">
+        <section class="min-h-screen flex flex-col justify-center items-center text-center custom-gradient motion-safe:animate-fadeInUp" aria-labelledby="hero-landing">
+
+            <!-- Nama dan Title -->
             <h1 id="hero-heading" class="text-4xl md:text-6xl font-bold mb-4 flex items-center gap-2 justify-center">
                 Hi, I'm <strong class="text-purple-400">Arno</strong>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-400 animate-float" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m0 14v1m7-7h1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
-                </svg>
+                <div class="w-40 h-60 rounded-full border-4 border-purple-500 p-1 bg-gray-100 overflow-hidden shadow-lg animate-float">
+                    <img src="assets/profile.jpg" alt="Foto Profil Galih Gratia Arno" class="w-full h-full object-cover rounded-full">
+                </div>
             </h1>
+            
+            <!-- Subjudul -->
             <p class="text-xl mb-6">Seorang <em class="text-purple-300">Programer</em> yang berfokus pada pengembangan website.</p>
+
+            <!-- Tombol CTA -->
             <a href="#projects" class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out inline-flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
@@ -68,128 +78,12 @@
             </a>
         </section>
 
-        <!-- Projects -->
-        <section id="projects" class="py-16 px-8 bg-gray-800 motion-safe:animate-fadeInUp" aria-labelledby="projects-heading">
+        <!-- Project Section -->
+        <section id="projects" class="py-16 px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 motion-safe:animate-fadeInUp" aria-labelledby="projects-heading">
             <div class="container mx-auto">
-                <h2 id="projects-heading" class="text-3xl font-bold mb-8 text-center text-purple-400">Proyek Terbaru</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                    <!-- Project 1 -->
-                    <article class="bg-gray-700/50 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105" aria-labelledby="project1-title">
-                        <figure class="overflow-hidden">
-                            <img src="assets/project-1.png" alt="Tampilan proyek GudangLy" class="w-full h-48 object-cover">
-                            <figcaption class="sr-only">Tampilan GudangLy</figcaption>
-                        </figure>
-                        <div class="p-6">
-                            <h3 id="project1-title" class="font-bold text-xl flex items-center gap-2 text-purple-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
-                                </svg>
-                                GudangLy
-                            </h3>
-                            <p class="mt-2 text-gray-300">Aplikasi Manajemen Inventaris adalah aplikasi berbasis web untuk mengelola stok barang, menambah, mengedit, dan menghapus barang dari inventaris.</p>
-                            <p class="mt-2 text-gray-300">Ini adalah proyek sederhana yang saya buat untuk mengajar Siswa RPL SMK 3 Metro saat sedang melakukan Prakerin di Kampus.</p>
-                            <p class="mt-2 text-gray-300">Teknologi yang digunakan: Flask, HTML, dan Bootstrap.</p>
-                            <a href="https://github.com/Galih-Arno/gudangly" class="text-purple-400 mt-4 inline-block hover:text-purple-300 transition duration-300">Lihat Proyek</a>
-                        </div>
-                    </article>
-
-                    <!-- Project 2 -->
-                    <article class="bg-gray-700/50 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105" aria-labelledby="project2-title">
-                        <figure class="overflow-hidden">
-                            <img src="assets/default.png" alt="Tampilan proyek Website Portofolio" class="w-full h-48 object-cover">
-                            <figcaption class="sr-only">Tampilan Website Portofolio Sederhana</figcaption>
-                        </figure>
-                        <div class="p-6">
-                            <h3 id="project2-title" class="font-bold text-xl flex items-center gap-2 text-purple-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
-                                </svg>
-                                Portofolio Sederhana
-                            </h3>
-                            <p class="mt-2 text-gray-300">Proyek sederhana untuk mengembangkan portofolio sederhana pribadi.</p>
-                            <p class="mt-2 text-gray-300">Proyek ini saya buat sewaktu masih menempuh pendidikan di Universitas.</p>
-                            <p class="mt-2 text-gray-300">Teknologi yang digunakan: Flask, HTML, dan Bootstrap</p>
-                            <a href="https://github.com/Galih-Arno/portofolio" class="text-purple-400 mt-4 inline-block hover:text-purple-300 transition duration-300">Lihat Proyek</a>
-                        </div>
-                    </article>
-
-                    <!-- Project 3 -->
-                    <article class="bg-gray-700/50 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105" aria-labelledby="project3-title">
-                        <figure class="overflow-hidden">
-                            <img src="assets/project-3.png" alt="Tampilan proyek Website Penjualan Surfboards" class="w-full h-48 object-cover">
-                            <figcaption class="sr-only">Tampilan Website One Euphoria</figcaption>
-                        </figure>
-                        <div class="p-6">
-                            <h3 id="project3-title" class="font-bold text-xl flex items-center gap-2 text-purple-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
-                                </svg>
-                                Website One Euphoria
-                            </h3>
-                            <p class="mt-2 text-gray-300">Website Penjualan Surfboards sederhana dan responsive.</p>
-                            <p class="mt-2 text-gray-300">Website ini memiliki fitur-fitur sederhana dengan pendekatan product showcase, surfing blog, customer testimonials, dan responsive design.</p>
-                            <p class="mt-2 text-gray-300">Teknologi yang digunakan: VueJS dan TailwindCSS.</p>
-                            <a href="https://github.com/Galih-Arno/one-euphoria-website" class="text-purple-400 mt-4 inline-block hover:text-purple-300 transition duration-300">Lihat Proyek</a>
-                        </div>
-                    </article>
-
-                    <!-- Project 4 -->
-                    <article class="bg-gray-700/50 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105" aria-labelledby="project3-title">
-                        <figure class="overflow-hidden">
-                            <img src="assets/default.png" alt="Tampilan proyek Website Personal" class="w-full h-48 object-cover">
-                            <figcaption class="sr-only">Tampilan Website Personal</figcaption>
-                        </figure>
-                        <div class="p-6">
-                            <h3 id="project3-title" class="font-bold text-xl flex items-center gap-2 text-purple-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
-                                </svg>
-                                Website Personal
-                            </h3>
-                            <p class="mt-2 text-gray-300">Website Personal sederhana dan responsive.</p>
-                            <p class="mt-2 text-gray-300">Teknologi yang digunakan: HTML dan TailwindCSS.</p>
-                            <a href="https://github.com/Galih-Arno/personal-website" class="text-purple-400 mt-4 inline-block hover:text-purple-300 transition duration-300">Lihat Proyek</a>
-                        </div>
-                    </article>
-
-                    <!-- Project 5 -->
-                    <article class="bg-gray-700/50 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105" aria-labelledby="project3-title">
-                        <figure class="overflow-hidden">
-                            <img src="assets/default.png" alt="Tampilan proyek belajar Semantic HTML" class="w-full h-48 object-cover">
-                            <figcaption class="sr-only">Tampilan Semantic HTML</figcaption>
-                        </figure>
-                        <div class="p-6">
-                            <h3 id="project3-title" class="font-bold text-xl flex items-center gap-2 text-purple-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
-                                </svg>
-                                Semantic HTML
-                            </h3>
-                            <p class="mt-2 text-gray-300">Proyek belajar Semantic HTML</p>
-                            <p class="mt-2 text-gray-300">Catatan pribadi saya belajar Semantic HMTL.</p>
-                            <a href="https://github.com/Galih-Arno/learn-semantic-html" class="text-purple-400 mt-4 inline-block hover:text-purple-300 transition duration-300">Lihat Proyek</a>
-                        </div>
-                    </article>
-
-                    <!-- Project 6 -->
-                    <article class="bg-gray-700/50 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105" aria-labelledby="project3-title">
-                        <figure class="overflow-hidden">
-                            <img src="assets/project-6.png" alt="Tampilan proyek aplikasi kasir sederhana" class="w-full h-48 object-cover">
-                            <figcaption class="sr-only">Tampilan aplikasi kasir</figcaption>
-                        </figure>
-                        <div class="p-6">
-                            <h3 id="project3-title" class="font-bold text-xl flex items-center gap-2 text-purple-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
-                                </svg>
-                                Aplikasi Kasir Sederhana
-                            </h3>
-                            <p class="mt-2 text-gray-300">Proyek Aplikasi Kasir Sederhana CRUD</p>
-                            <p class="mt-2 text-gray-300">Teknologi yang digunakan: Flask, SQLite, dan TailwindCSS (CDN)</p>
-                            <a href="https://github.com/Galih-Arno/aplikasi-kasir" class="text-purple-400 mt-4 inline-block hover:text-purple-300 transition duration-300">Lihat Proyek</a>
-                        </div>
-                    </article>
+                <h2 id="projects-heading" class="text-4xl font-extrabold mb-12 text-center text-purple-400 tracking-wide">✨ Proyek Terbaru ✨</h2>
+                <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Projects will be injected here by JavaScript -->
                 </div>
             </div>
         </section>
@@ -198,15 +92,15 @@
         <section id="contact" class="py-16 px-8 bg-gray-900 text-white text-center" aria-labelledby="contact-heading">
             <div class="container mx-auto">
                 <h2 id="contact-heading" class="text-3xl font-bold mb-4 text-purple-400">Hubungi Saya</h2>
-                <p>Email: 
-                    <a href="mailto:galihgratiaarno@gmail.com" class="underline flex items-center gap-2 justify-center hover:text-purple-300 transform hover:-translate-y-1 transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 0v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8m18 0L12 13 3 8" />
-                        </svg>
-                        galihgratiaarno@gmail.com
-                    </a>
-                </p>
-                
+                    <p class="flex items-center justify-center gap-2">
+                        <a href="mailto:galihgratiaarno@gmail.com" class="underline inline-flex items-center gap-2 hover:text-purple-300 transform hover:-translate-y-1 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 4l8 5 8-5" />
+                            </svg>
+                            <span>galihgratiaarno@gmail.com</span>
+                        </a>
+                    </p>
+                    
                 <ul class="flex justify-center space-x-6 mt-4" role="list" aria-label="Link sosial media">
                     <li>
                         <a href="https://github.com/Galih-Arno" target="_blank" class="hover:text-purple-300 flex items-center gap-2">
@@ -238,5 +132,6 @@
             2025 Arno. Dibuat dengan menggunakan TailwindCSS.
         </p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
