@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Komprehensif Python 3.12 | Arno Programer</title>
+    <meta name="description" content="Panduan lengkap pemrograman Python 3.12 dengan teknik penulisan kode profesional dan fitur-fitur terbaru">
+    <meta name="author" content="Galih Gratia Arno">
+    <meta property="og:title" content="Panduan Komprehensif Python 3.12 - Arno Programer">
+    <meta property="og:description" content="Panduan lengkap pemrograman Python 3.12 dengan teknik penulisan kode profesional dan fitur-fitur terbaru">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <style>
+        .custom-gradient {
+            background: linear-gradient(135deg, rgba(123,31,162,1) 0%, rgba(32,76,133,1) 50%, rgba(0,0,0,1) 100%);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out both;
+        }
+
+        .content-wrapper code {
+            @apply bg-gray-800 text-gray-100 px-2 py-1 rounded;
+        }
+        .content-wrapper pre {
+            @apply bg-gray-900 rounded-lg overflow-x-auto p-4 my-4;
+        }
+        .content-wrapper pre code {
+            @apply bg-transparent p-0;
+        }
+        .content-wrapper h2 {
+            @apply text-2xl font-bold text-purple-400 mt-8 mb-4 border-b border-gray-700 pb-2;
+        }
+        .content-wrapper h3 {
+            @apply text-xl font-semibold text-gray-300 mt-6 mb-3;
+        }
+        .content-wrapper blockquote {
+            @apply border-l-4 border-purple-500 pl-4 py-2 my-4 bg-gray-800/50 italic text-gray-300;
+        }
+        .content-wrapper table {
+            @apply w-full my-6 border-collapse;
+        }
+        .content-wrapper th {
+            @apply bg-gray-800 text-left px-4 py-2 border border-gray-700;
+        }
+        .content-wrapper td {
+            @apply px-4 py-2 border border-gray-700;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 leading-relaxed">
+    
+    <!-- Header -->
+    <header class="bg-gray-800/80 shadow-lg transition-shadow duration-300 fixed w-full z-50" role="banner">
+        <nav class="container mx-auto flex justify-between items-center p-4" aria-label="Navigasi utama">
+            <a href="index.html" class="text-2xl font-bold text-purple-100" aria-label="Beranda"><strong>Arno</strong></a>
+            <ul class="flex space-x-6" role="list">
+                <li><a href="index.html#projects" class="hover:text-purple-400 transition duration-300">Projects</a></li>
+                <li><a href="blog.html" class="hover:text-purple-400 transition duration-300 font-semibold text-purple-300">Blog</a></li>
+                <li><a href="index.html#contact" class="hover:text-purple-400 transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Blog Post Hero -->
+    <section class="pt-32 pb-16 px-8 custom-gradient motion-safe:animate-fadeInUp">
+        <div class="container mx-auto max-w-4xl">
+            <div class="mb-6">
+                <a href="blog.html" class="text-purple-300 hover:text-purple-200 inline-flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i> Kembali ke Blog
+                </a>
+            </div>
+            <div class="flex items-center text-sm text-purple-200 mb-4">
+                <span><i class="far fa-calendar-alt mr-2"></i>15 Maret 2025</span>
+                <span class="mx-3">•</span>
+                <span><i class="far fa-clock mr-2"></i>15 min read</span>
+                <span class="mx-3">•</span>
+                <span class="bg-purple-900/50 text-purple-300 px-2 py-1 rounded text-xs">Python</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-6 text-white">Panduan Komprehensif Pemrograman Python 3.12</h1>
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                    <img src="../assets/profile.jpg" alt="Galih Gratia Arno" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <p class="text-sm text-purple-200">Galih Gratia Arno</p>
+                    <p class="text-xs text-purple-300">Junior Web Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Image -->
+    <div class="container mx-auto max-w-4xl px-8 -mt-8 mb-8">
+        <div class="rounded-xl overflow-hidden shadow-2xl">
+            <img src="https://source.unsplash.com/random/1200x600/?python,code" alt="Python Programming" class="w-full h-auto object-cover">
+        </div>
+    </div>
+
+    <!-- Blog Content -->
+    <article class="container mx-auto max-w-3xl px-8 pb-16 content-wrapper">
+        <p class="text-xl text-gray-300 mb-6">Python 3.12 membawa berbagai peningkatan performa dan fitur baru. Artikel ini akan membahas secara mendalam teknik pemrograman Python profesional dengan contoh kode yang sesuai standar industri.</p>
+
+        <h2>1. Persiapan Lingkungan Pengembangan</h2>
+        <p>Sebelum memulai, pastikan Anda telah menginstal Python 3.12:</p>
+
+        <pre><code class="language-bash"># Untuk Linux/macOS
+python3.12 --version
+
+# Untuk Windows
+py -3.12 --version</code></pre>
+
+        <p>Rekomendasi alat pengembangan:</p>
+        <ul class="list-disc pl-6 mb-6">
+            <li>Visual Studio Code dengan ekstensi Python</li>
+            <li>PyCharm Professional/Community</li>
+            <li>Jupyter Notebook untuk analisis data</li>
+        </ul>
+
+        <h2>2. Fitur Baru Python 3.12</h2>
+        
+        <h3>2.1. F-String yang Lebih Powerful</h3>
+        <p>Python 3.12 memperluas kemampuan f-string:</p>
+
+        <pre><code class="language-python"># Multi-line f-string
+message = (
+    f"Hello, {name}!\n"
+    f"Your account balance is: {balance:,.2f}\n"
+    f"Last login: {last_login:%Y-%m-%d %H:%M}"
+)
+
+# F-string dengan ekspresi kompleks
+users = ["Alice", "Bob", "Charlie"]
+print(f"{users = }")  # Output: users = ['Alice', 'Bob', 'Charlie']
+
+# Format angka yang lebih fleksibel
+number = 1234567890
+print(f"{number:_}")  # Output: 1_234_567_890</code></pre>
+
+        <h3>2.2. Pattern Matching yang Diperbarui</h3>
+        <p>Structural pattern matching semakin powerful:</p>
+
+        <pre><code class="language-python">def process_data(data):
+    match data:
+        case {"type": "user", "name": str(name), "age": int(age)} if age >= 18:
+            print(f"Adult user: {name}")
+        case {"type": "user", "name": str(name), "age": int(age)}:
+            print(f"Minor user: {name}")
+        case {"type": "product", "id": int(id), "price": float(price)}:
+            print(f"Product ID {id} costs ${price:.2f}")
+        case _:
+            print("Unknown data type")
+
+# Contoh penggunaan
+process_data({"type": "user", "name": "Alice", "age": 25})</code></pre>
+
+        <h2>3. Teknik Pemrograman Profesional</h2>
+
+        <h3>3.1. Type Hinting dan Static Typing</h3>
+        <p>Python 3.12 mendukung type hinting yang lebih ekspresif:</p>
+
+        <pre><code class="language-python">from typing import TypeVar, Generic, Optional, Callable
+
+T = TypeVar('T')
+
+class DataProcessor(Generic[T]):
+    def __init__(self, data: list[T]) -> None:
+        self.data = data
+    
+    def process(self, func: Callable[[T], bool]) -> list[T]:
+        return [item for item in self.data if func(item)]
+
+def is_even(num: int) -> bool:
+    return num % 2 == 0
+
+processor = DataProcessor[int]([1, 2, 3, 4, 5])
+result = processor.process(is_even)
+print(result)  # Output: [2, 4]</code></pre>
+
+        <h3>3.2. Manajemen Resource dengan Context Managers</h3>
+        <p>Gunakan context manager untuk manajemen resource yang aman:</p>
+
+        <pre><code class="language-python">from contextlib import contextmanager
+import sqlite3
+from pathlib import Path
+
+@contextmanager
+def database_connection(db_path: Path):
+    conn = sqlite3.connect(db_path)
+    try:
+        yield conn
+    except sqlite3.Error as e:
+        conn.rollback()
+        raise e
+    finally:
+        conn.close()
+
+# Penggunaan
+db_path = Path("example.db")
+with database_connection(db_path) as conn:
+    cursor = conn.cursor()
+    cursor.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)")
+    cursor.execute("INSERT INTO users (name) VALUES (?)", ("Alice",))
+    conn.commit()</code></pre>
+
+        <h2>4. Best Practices Python 3.12</h2>
+
+        <h3>4.1. Struktur Proyek yang Baik</h3>
+        <p>Struktur direktori yang direkomendasikan:</p>
+
+        <pre><code class="language-plaintext">my_project/
+├── pyproject.toml  # Konfigurasi proyek modern
+├── src/
+│   └── my_package/
+│       ├── __init__.py
+│       ├── module1.py
+│       └── subpackage/
+│           ├── __init__.py
+│           └── module2.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_module1.py
+│   └── test_module2.py
+├── docs/
+│   └── index.md
+└── README.md</code></pre>
+
+        <h3>4.2. Penggunaan Walrus Operator</h3>
+        <p>Operator := (walrus) untuk assignment dalam ekspresi:</p>
+
+        <pre><code class="language-python"># Contoh penggunaan yang tepat
+if (n := len(data)) > 10:
+    print(f"Data terlalu besar ({n} items), proses sampling...")
+    data = random.sample(data, 10)
+
+# Pattern matching dengan walrus
+match get_user_input():
+    case "quit":
+        print("Goodbye!")
+    case cmd if (parts := cmd.split()) and parts[0] == "search":
+        print(f"Searching for: {' '.join(parts[1:])}")
+    case _:
+        print("Unknown command")</code></pre>
+
+        <div class="mt-12 pt-6 border-t border-gray-700">
+            <h3 class="text-lg font-semibold mb-4">Pertanyaan atau Komentar?</h3>
+            <p>Bagikan pengalaman Anda menggunakan Python 3.12 di kolom komentar atau mention saya di Instagram <a href="https://instagram.com/g9.arno" class="text-purple-400 hover:text-purple-300">@g9.arno</a>!</p>
+        </div>
+    </article>
+
+    <!-- Related Posts -->
+    <section class="bg-gray-900 py-12 px-8">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-2xl font-bold mb-8 text-center text-purple-400">Artikel Terkait</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="post1.html" class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://source.unsplash.com/random/600x400/?programming,1" alt="Belajar Programming" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-white mb-2">Tips Belajar Programming Secara Otodidak</h3>
+                        <p class="text-sm text-gray-400">12 Maret 2025 • 5 min read</p>
+                    </div>
+                </a>
+
+                <!-- <a href="post3.html" class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://source.unsplash.com/random/600x400/?javascript,3" alt="JavaScript" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-white mb-2">Konsep JavaScript yang Membingungkan</h3>
+                        <p class="text-sm text-gray-400">20 Januari 2023 • 6 min read</p>
+                    </div>
+                </a>
+
+                <a href="post6.html" class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://source.unsplash.com/random/600x400/?database,6" alt="Database" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-white mb-2">Panduan Modern SQL untuk Developer</h3>
+                        <p class="text-sm text-gray-400">25 Oktober 2022 • 8 min read</p>
+                    </div>
+                </a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-4" role="contentinfo">
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 1.75A10.25 10.25 0 1 0 22.25 12 10.26 10.26 0 0 0 12 1.75zm0 18.5a8.25 8.25 0 1 1 8.25-8.25 8.26 8.26 0 0 1-8.25 8.25zm0-13a4.75 4.75 0 0 0-4.75 4.75.75.75 0 0 0 1.5 0 3.25 3.25 0 1 1 3.25 3.25.75.75 0 0 0 0 1.5A4.75 4.75 0 0 0 12 7.25z"/>
+            </svg>
+            2025 Arno. Dibuat dengan menggunakan TailwindCSS.
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
