@@ -1,158 +1,192 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
-        
-        :root {
-            --retro-primary: #ff6b6b;
-            --retro-secondary: #4ecdc4;
-            --retro-accent: #ffe66d;
-            --retro-dark: #292f36;
-            --retro-light: #f7fff7;
-        }
-        
-        .retro-font {
-            font-family: 'VT323', monospace;
-        }
-        
-        .pixel-font {
-            font-family: 'Press Start 2P', cursive;
-        }
-        
-        .retro-border {
-            border: 4px solid var(--retro-dark);
-            box-shadow: 8px 8px 0 var(--retro-dark);
-        }
-        
-        .retro-btn {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .retro-btn:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 4px 4px 0 var(--retro-dark);
-        }
-        
-        .retro-btn:active {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0 var(--retro-dark);
-        }
-        
-        .retro-btn::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-        }
-        
-        .retro-btn:hover::after {
-            left: 100%;
-        }
-        
-        .crt-effect::before {
-            content: " ";
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-            z-index: 2;
-            background-size: 100% 4px, 3px 100%;
-            pointer-events: none;
-        }
-        
-        @keyframes flicker {
-            0% { opacity: 0.95; }
-            5% { opacity: 0.9; }
-            10% { opacity: 0.85; }
-            15% { opacity: 0.92; }
-            20% { opacity: 0.88; }
-            25% { opacity: 0.94; }
-            30% { opacity: 0.98; }
-            35% { opacity: 0.91; }
-            40% { opacity: 0.96; }
-            45% { opacity: 0.93; }
-            50% { opacity: 0.97; }
-            55% { opacity: 0.94; }
-            60% { opacity: 0.89; }
-            65% { opacity: 0.92; }
-            70% { opacity: 0.95; }
-            75% { opacity: 0.97; }
-            80% { opacity: 0.93; }
-            85% { opacity: 0.96; }
-            90% { opacity: 0.99; }
-            95% { opacity: 0.91; }
-            100% { opacity: 0.98; }
-        }
-        
-        .flicker {
-            animation: flicker 0.5s infinite;
-        }
-        
-        .scanline {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .scanline::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                to bottom,
-                transparent 0%,
-                rgba(255, 255, 255, 0.1) 50%,
-                transparent 100%
-            );
-            animation: scan 8s linear infinite;
-            pointer-events: none;
-        }
-        
-        @keyframes scan {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
-        
-        .typewriter {
-            overflow: hidden;
-            border-right: 3px solid var(--retro-primary);
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: -3px;
-            animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
-        }
 
-        .typewriter-alt {
-            overflow: hidden;
-            border-right: 3px solid var(--retro-primary);
-            white-space: nowarp;
-            margin: 0 auto;
-            letter-spacing: 2px;
-            width: fit-content;
-            animation: 
-                blink-caret 0.75s step-end infinite;
-        }
-        
-        .typewriter-alt::after {
-            content: '';
-            display: inline-block;
-            animation: typing 3.5s steps(50, end) forwards;
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--retro-primary) }
-        }
+:root {
+    --retro-primary: #ff6b6b;
+    --retro-secondary: #4ecdc4;
+    --retro-accent: #ffe66d;
+    --retro-dark: #292f36;
+    --retro-light: #f7fff7;
+}
+
+.retro-font {
+    font-family: 'VT323', monospace;
+}
+
+.pixel-font {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.retro-border {
+    border: 4px solid var(--retro-dark);
+    box-shadow: 8px 8px 0 var(--retro-dark);
+}
+
+.retro-btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.retro-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--retro-dark);
+}
+
+.retro-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--retro-dark);
+}
+
+.retro-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.retro-btn:hover::after {
+    left: 100%;
+}
+
+.crt-effect::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.95; }
+    5% { opacity: 0.9; }
+    10% { opacity: 0.85; }
+    15% { opacity: 0.92; }
+    20% { opacity: 0.88; }
+    25% { opacity: 0.94; }
+    30% { opacity: 0.98; }
+    35% { opacity: 0.91; }
+    40% { opacity: 0.96; }
+    45% { opacity: 0.93; }
+    50% { opacity: 0.97; }
+    55% { opacity: 0.94; }
+    60% { opacity: 0.89; }
+    65% { opacity: 0.92; }
+    70% { opacity: 0.95; }
+    75% { opacity: 0.97; }
+    80% { opacity: 0.93; }
+    85% { opacity: 0.96; }
+    90% { opacity: 0.99; }
+    95% { opacity: 0.91; }
+    100% { opacity: 0.98; }
+}
+
+.flicker {
+    animation: flicker 0.5s infinite;
+}
+
+.scanline {
+    position: relative;
+    overflow: hidden;
+}
+
+.scanline::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+    );
+    animation: scan 8s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid var(--retro-primary);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: -3px;
+    animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+.typewriter-alt {
+    overflow: hidden;
+    border-right: 3px solid var(--retro-primary);
+    white-space: nowarp;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    width: fit-content;
+    animation: 
+        blink-caret 0.75s step-end infinite;
+}
+
+.typewriter-alt::after {
+    content: '';
+    display: inline-block;
+    animation: typing 3.5s steps(50, end) forwards;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--retro-primary) }
+}
+
+@media (max-width: 768px) {
+    #home {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    
+    h1 {
+        font-size: 1rem; /* Decrease for mobile */
+    }
+
+    p.flicker {
+        font-size: 1.25rem; /* Adjust for mobile */
+    }
+
+    .retro-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1rem; /* Further adjustment for very small screens */
+    }
+
+    p.flicker {
+        font-size: 1rem; /* Smaller font for smaller devices */
+    }
+
+    .retro-btn {
+        padding: 1rem; /* Larger buttons on small screens */
+    }
+}
