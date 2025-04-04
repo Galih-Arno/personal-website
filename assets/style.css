@@ -137,8 +137,7 @@
     margin: 0 auto;
     letter-spacing: 2px;
     width: fit-content;
-    animation: 
-        blink-caret 0.75s step-end infinite;
+    animation: blink-caret 0.75s step-end infinite;
 }
 
 .typewriter-alt::after {
@@ -155,38 +154,4 @@
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: var(--retro-primary) }
-}
-
-@media (max-width: 768px) {
-    #home {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
-    
-    h1 {
-        font-size: 1rem; /* Decrease for mobile */
-    }
-
-    p.flicker {
-        font-size: 1.25rem; /* Adjust for mobile */
-    }
-
-    .retro-btn {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1rem; /* Further adjustment for very small screens */
-    }
-
-    p.flicker {
-        font-size: 1rem; /* Smaller font for smaller devices */
-    }
-
-    .retro-btn {
-        padding: 1rem; /* Larger buttons on small screens */
-    }
 }

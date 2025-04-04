@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Retro-styled personal portfolio website with classic design elements">
+    <title>C:\ARNO\PROJECTS\>_</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-white retro-font text-gray-800">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-400 retro-border z-40">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="pixel-font text-xl text-gray-50 hover:text-retro-primary transition-colors">
+                    <span class="text-retro-primary">C:\ARNO</span>SPACE>_
+                </a>
+                
+                <button id="menu-toggle" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="retro-btn px-4 py-2 bg-white text-retro-dark retro-border hover:bg-gray-100">HOME</a>
+                    <a href="#about" class="retro-btn px-4 py-2 bg-white text-retro-dark retro-border hover:bg-gray-100">ABOUT</a>
+                    <a href="#projects" class="retro-btn px-4 py-2 bg-white text-retro-dark retro-border hover:bg-gray-100">PROJECTS</a>
+                    <a href="#blog" class="retro-btn px-4 py-2 bg-white text-retro-dark retro-border hover:bg-gray-100">BLOG</a>
+                    <a href="#contact" class="retro-btn px-4 py-2 bg-white text-retro-dark retro-border hover:bg-gray-100">CONTACT</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 pb-2">
+                <a href="#home" class="block retro-btn px-4 py-2 bg-white text-dark retro-border text-center">HOME</a>
+                <a href="#about" class="block retro-btn px-4 py-2 bg-white text-dark retro-border text-center">ABOUT</a>
+                <a href="#projects" class="block retro-btn px-4 py-2 bg-white text-dark retro-border text-center">PROJECTS</a>
+                <a href="#blog" class="block retro-btn px-4 py-2 bg-white text-dark retro-border text-center">BLOG</a>
+                <a href="#contact" class="block retro-btn px-4 py-2 bg-white text-dark retro-border text-center">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="pt-24 pb-12">
+        
+        <!-- Projects Section -->
+        <section id="projects" class="min-h-screen py-20 px-4 bg-amber-200 retro-border-t retro-border-b">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl md:text-5xl mb-12 pixel-font text-center retro-border bg-white inline-block px-8 py-4 mx-auto block">
+                    <span class="text-retro-secondary">PROJECT</span> <span class="text-retro-primary">1</span>
+                </h2>
+                
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-1/3 relative">
+                        <div class="retro-border bg-dark p-2 relative mb-8">
+                            <img src="assets/images/default.png" alt="Retro portrait" class="w-full h-auto">
+                        </div>
+                        <div class="retro-border bg-dark p-2 relative">
+                            <img src="assets/images/default.png" alt="Retro portrait" class="w-full h-auto">
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-2/3">
+                        <div class="retro-border bg-white p-8 relative">
+                            <div class="absolute -top-4 -right-4 w-12 h-12 bg-retro-primary retro-border flex items-center justify-center">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                            
+                            <h3 class="text-3xl mb-4 pixel-font text-retro-secondary">Aplikasi Manajemen Inventaris</h3>
+                            <p class="mb-2 text-lg leading-relaxed">
+                                Ini adalah aplikasi berbasis web yang dibangun menggunakan <strong>Flask</strong>, <strong>Bootstrap</strong>, dan <strong>Mysql</strong>
+                                yang terintegrasi dengan database. Proyek Aplikasi Manajemen Inventaris ini sebagai contoh proyek web development sederhana yang dapat
+                                mengelola stok barang, menambah, mengedit, dan menghapus barang dari inventaris.
+                            </p>
+                            <p class="mb-6 text-lg leading-relaxed">
+                                Aplikasi menjadi proyek saat saya <strong>freelance tutor web development</strong> untuk siswa-siswi SMK 3 Metro jurusan Rekayasa Perangkat Lunak,
+                                saat mereka sedang melakukan Praktik Kerja Industri (PRAKERIN) di Universitas Dharma Wacana Metro.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 ">
+                                <div class="retro-border p-4 bg-amber-100">
+                                    <h4 class="text-xl pixel-font mb-2 text-retro-primary">Fitur</h4>
+                                    <ul class="list-disc list-inside">
+                                        <li>Manajemen Barang (CRUD)</li>
+                                        <li>Kategori Barang</li>
+                                        <li>Responsive Design (Bootstrap)</li>
+                                        <li>Monitoring stok</li>
+                                    </ul>
+                                </div>
+                                <div class="retro-border p-4 bg-amber-100">
+                                    <h4 class="text-xl pixel-font mb-2 text-retro-secondary">Tech</h4>
+                                    <ul class="list-disc list-inside">
+                                        <li>Flask (Python Framework)</li>
+                                        <li>Mysql (Client Server)</li>
+                                        <li>HTML, JavaScript, dan Bootstrap</li>
+                                        <li>Git & GitHub</li>
+                                        <li>Vercel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="retro-btn inline-block px-6 py-2 bg-retro-dark text-dark retro-border">
+                                TRY DEMO <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-retro-dark text-dark py-12 px-4 retro-border-t">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <a href="#home" class="pixel-font text-3xl">
+                        <span class="text-retro-primary">ARNO</span><span class="text-dark">SPACE</span>
+                    </a>
+                    <p class="retro-font mt-2">Bringing back the classics with a modern twist</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/g9.arno" class="w-10 h-10 bg-retro-primary text-dark retro-border flex items-center justify-center hover:bg-gray-400 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/Galih-Arno" class="w-10 h-10 bg-retro-secondary text-dark retro-border flex items-center justify-center hover:bg-gray-400 transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/galihgratiaarno" class="w-10 h-10 bg-retro-accent text-retro-dark retro-border flex items-center justify-center hover:bg-gray-400 transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white text-retro-dark retro-border flex items-center justify-center hover:bg-gray-900 transition-colors">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="retro-font mb-4 md:mb-0">&copy; 2025 ArnoSpace. Crafted with passion. All ideas welcome.</p>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="retro-font hover:text-retro-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="retro-font hover:text-retro-primary transition-colors">Terms of Service</a>
+                    <a href="#" class="retro-font hover:text-retro-primary transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-retro-primary text-dark retro-border flex items-center justify-center opacity-0 invisible transition-all duration-300 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="assets/script.js"></script>
+</body>
+</html>
